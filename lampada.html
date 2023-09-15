@@ -10,11 +10,13 @@
     <main class="container">
         <section class="lamp"> <!-- Lamp -->
             <h1 class="title-lamp">LAMP</h1>
-            <img src="imagens/lamp-on.jpg" alt="lamp-on" class="lamp-img">
+            <div id="lamp-result"> <!-- Result -->
+                <img src="imagens/lamp-on.jpg" alt="lamp-on" class="lamp-img" id="lamp-on">
+            </div>
         </section>
         <div class="container-botton"> 
-            <input type="button" value="Turn On" class="botton"> <!-- Button On-->
-            <input type="button" value="Turn Off" class="botton"> <!-- Button Off-->
+            <input type="button" value="Turn On" class="botton" onclick="turnOn()"> <!-- Button On-->
+            <input type="button" value="Turn Off" class="botton" onclick="turnOff()"> <!-- Button Off-->
         </div>
     </main>
     <script src="lampada.js"></script>
