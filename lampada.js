@@ -1,14 +1,16 @@
 const result = document.getElementById('lamp-result')
 
-function insertImg(r) { // Function to insert Img on or Img off by event turn()
+function insertImg(on) {
     const img = document.createElement('img')
-    img.setAttribute=('id', 'lamp')
-}
-
-function turnOn() { // Here the lamp will turn on by click
-    insertImg(result)
+    img.setAttribute('id', 'lamp-off')
+    img.setAttribute('src', 'imagens/lamp-off.jpg')
+    if(on) {
+        on === ``
+        return result.appendChild(img)
+    }
 }
 
 function turnOff() { // Here the lamp will turn off by click
-    insertImg(result)
+    const turnOn = document.getElementById('lamp-on')
+    insertImg(turnOn)
 }
