@@ -1,14 +1,10 @@
-const result = document.getElementById('lamp-result')
+const turnOn = document.getElementById('turnOn')
+const turnOff = document.getElementById('turnOff')
+const lamp = document.getElementById('lamp')
 
-function insertImg(on) {
-    const img = document.createElement('img')
-    img.setAttribute('id', 'lamp-off')
-    img.setAttribute('src', 'imagens/lamp-off.jpg')
-    if(on) {
-        return result.appendChild(img)
-    }
+function lampOn() {
+    lamp.src = 'imagens/lamp-on.jpg'
 }
 
-function turnOff() { // Here the lamp will turn off by click
-    
-}
+
+turnOn.addEventListener('click', lampOn)

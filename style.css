@@ -9,8 +9,8 @@
 
 .container {
     background-color: rgb(0, 0, 0);
-    height: 923px;
     height: 100vh;
+    overflow: hidden;
 }
 
 .title-lamp {
@@ -30,7 +30,7 @@
 .lamp-img {
     user-select: none;
     cursor: pointer;
-    width: 600px;
+    width: 400px;
 }
 
 .container-botton {
@@ -47,7 +47,7 @@
     background-color: goldenrod;
     border-radius: 17px;
     margin: 100px;
-    width: 206px;
+    width: 220px;
     height: 70px;
 }
 
