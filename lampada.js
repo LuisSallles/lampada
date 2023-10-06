@@ -1,14 +1,29 @@
-const result = document.getElementById('lamp-result')
+const turnOn = document.getElementById('turnOn')
+const turnOff = document.getElementById('turnOff')
+const lamp = document.getElementById('lamp')
 
-function insertImg(on) {
-    const img = document.createElement('img')
-    img.setAttribute('id', 'lamp-off')
-    img.setAttribute('src', 'imagens/lamp-off.jpg')
-    if(on) {
-        return result.appendChild(img)
+function isLampBroken() {
+    return lamp.src.indexOf('broken') > -1
+}
+
+function lampOn() {
+    if(!isLampBroken()) {
+    lamp.src = 'imagens/lamp-on.jpg'
     }
 }
 
-function turnOff() { // Here the lamp will turn off by click
-    
+function lampOff() {
+    if(!isLampBroken()) {
+    lamp.src = 'imagens/lamp.jpg'
+    }
 }
+
+function lampBroke() {
+    lamp.src = 'imagens/lamp-broken.jpg'
+}
+
+turnOn.addEventListener('click', lampOn)
+turnOff.addEventListener('click', lampOff)
+lamp.addEventListener('mouseover', lampOn)
+lamp.addEventListener('mouseleave', lampOff)
+lamp.addEventListener('dblclick', lampBroke)
