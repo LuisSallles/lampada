@@ -8,16 +8,16 @@
 }
 
 .container {
-    height: 100vh;
+    height: 95vh;
     overflow: hidden;
 }
 
 .title-lamp {
     color: black;
-    font-size: 80px;
+    font-size: 40px;
     font-family: Poppins, Helvetica, sans-serif;
     font-weight: 400;
-    padding: 50px;
+    padding: 20px;
 }
 
 .lamp {
@@ -29,7 +29,7 @@
 .lamp-img {
     user-select: none;
     cursor: pointer;
-    width: 300px;
+    width: 227px;
 }
 
 .container-botton {
@@ -46,8 +46,8 @@
     background-color: goldenrod;
     border-radius: 17px;
     margin: 100px;
-    width: 220px;
-    height: 70px;
+    width: 140px;
+    height: 50px;
 }
 
 .botton:hover {

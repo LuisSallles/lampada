@@ -1,29 +1,29 @@
-const turnOn = document.getElementById('turnOn')
-const turnOff = document.getElementById('turnOff')
+const lampOn = document.getElementById('turnOn') // Variables
+const lampOff = document.getElementById('turnOff')
 const lamp = document.getElementById('lamp')
 
-function isLampBroken() {
+function isBroken() { // Check if the lamp is broken, if broken, it return false(-1)
     return lamp.src.indexOf('broken') > -1
 }
 
-function lampOn() {
-    if(!isLampBroken()) {
+function turnOn() { // Turn on the lamp
+    if(!isBroken()) {
     lamp.src = 'imagens/lamp-on.jpg'
     }
 }
 
-function lampOff() {
-    if(!isLampBroken()) {
+function turnOff() { // Turn Off the lamp
+    if(!isBroken()) {
     lamp.src = 'imagens/lamp.jpg'
     }
 }
 
-function lampBroke() {
+function lampBroken() { // Double click, to broke the lamp
     lamp.src = 'imagens/lamp-broken.jpg'
 }
 
-turnOn.addEventListener('click', lampOn)
-turnOff.addEventListener('click', lampOff)
-lamp.addEventListener('mouseover', lampOn)
-lamp.addEventListener('mouseleave', lampOff)
-lamp.addEventListener('dblclick', lampBroke)
+lampOn.addEventListener('click', turnOn)
+lampOff.addEventListener('click', turnOff)
+lamp.addEventListener('mouseenter', turnOn)
+lamp.addEventListener('mouseleave', turnOff)
+lamp.addEventListener('dblclick', lampBroken)
